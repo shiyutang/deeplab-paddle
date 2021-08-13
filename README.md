@@ -1,5 +1,6 @@
 # deeplab-paddle
 paddle version for deeplab
+
 0. 运行pip install -r requirements.txt
 1. 基于paddleSeg，若安装pydencrf失败，请尝试pip install git+https://github.com/lucasb-eyer/pydensecrf.git
 2. 解压模型后将best_model文件夹放置在deeplabv2_cityscapes_b6下，运行run_eval.sh 中即可得到最终结果。
