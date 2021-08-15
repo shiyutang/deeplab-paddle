@@ -10,3 +10,4 @@ paddle version for deeplab
 模型文件和以及log放置位置:
 其中存放deeplabv2_cityscapes_b6_mIoU_78.zip 文件为日志文件和模型权重
 链接: https://pan.baidu.com/s/1c9_LmvzK5wcsvipuw7FsrA
+提取码：gpim
