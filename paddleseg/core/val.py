@@ -19,7 +19,7 @@ import time
 import paddle
 import paddle.nn.functional as F
 
-from paddleseg.utils import metrics, TimeAverager, calculate_eta, logger, progbar, DenseCRF
+from paddleseg.utils import metrics, TimeAverager, calculate_eta, logger, progbar #, DenseCRF
 from paddleseg.core import infer
 
 np.set_printoptions(suppress=True)

@@ -113,6 +113,7 @@ def predict(model,
                     is_slide=is_slide,
                     stride=stride,
                     crop_size=crop_size)
+            pred = paddle.argmax(pred, axis=1, keepdim=True)
             pred = paddle.squeeze(pred)
             pred = pred.numpy().astype('uint8')
 
@@ -129,6 +130,7 @@ def predict(model,
             added_image_path = os.path.join(added_saved_dir, im_file)
             mkdir(added_image_path)
             cv2.imwrite(added_image_path, added_image)
+            print("save to ", added_image_path)
 
             # save pseudo color prediction
             pred_mask = utils.visualize.get_pseudo_color_map(pred)
@@ -137,6 +139,7 @@ def predict(model,
                 os.path.splitext(im_file)[0] + ".png")
             mkdir(pred_saved_path)
             pred_mask.save(pred_saved_path)
+            print("save to ", pred_saved_path)
 
             # pred_im = utils.visualize(im_path, pred, weight=0.0)
             # pred_saved_path = os.path.join(pred_saved_dir, im_file)
